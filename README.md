@@ -7,7 +7,19 @@ Install instructions
 --------------------
 
 ```
-$ make
-$ sudo modprobe usbserial
-$ sudo insmod ./xsens_mt.ko
+make
+sudo modprobe usbserial
+sudo insmod ./xsens_mt.ko
+```
+
+Device file modes
+-----------------
+
+You will not be able to use a device without the proper rights.
+By default, only root can access it.
+
+This is easily fixed with the following command:
+
+```
+sudo chmod 777 /dev/ttyUSB0
 ```
